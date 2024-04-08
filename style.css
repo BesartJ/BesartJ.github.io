@@ -1,0 +1,111 @@
+
+
+/* Zusätzliche Stile, um den Rest der Seite anzupassen, wenn nötig */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f7;
+    color: #333;
+}
+.image {
+    background: url(images/obst.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    color: #fff;
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 150px 20px; /* Anpassung basierend auf der gewünschten Textposition */
+    text-align: center;
+}
+
+.headerr-content
+{
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+/* Der restliche Container-Stil bleibt unverändert, wird aber nur auf die unterhalb des Headers liegenden Bereiche angewendet. */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Die restlichen CSS-Regeln bleiben unverändert */
+
+
+/* Die restlichen CSS-Regeln bleiben unverändert */
+
+
+.headerr-content h1 {
+    color: #007BFF;
+    margin-bottom: 5px;
+}
+
+.headerr-content p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+#search-section {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#search-input {
+    padding: 15px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+button {
+    padding: 15px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#search-results {
+    margin-top: 20px;
+    text-align: left;
+}
+
+#search-results div {
+    background: white;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#search-results h3 {
+    margin: 0 0 10px 0;
+}
+
+#search-results p {
+    margin: 0;
+    color: #666;
+}
