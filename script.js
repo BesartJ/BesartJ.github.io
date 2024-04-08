@@ -56,6 +56,15 @@ document.getElementById('search-input').addEventListener('keyup', function(event
         searchData();
     }
 });
+function escapeInput(input) {
+    return input
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
 
 
 function searchData() {
@@ -71,7 +80,17 @@ function displayResults(results) {
 
     results.forEach(item => {
         const element = document.createElement('div');
+        // Direktes Einfügen der Eingaben ohne Escaping
         element.innerHTML = `<h3>${item.name}</h3><p>${item.description}</p>`;
         resultsContainer.appendChild(element);
     });
+    
+    // Evaluiere und führe alle <script>-Tags in den Ergebnissen aus
+    const scripts = resultsContainer.getElementsByTagName("script");
+    for (let script of scripts) {
+        eval(script.innerText);
+    }
 }
+
+
+
